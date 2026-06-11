@@ -49,14 +49,34 @@ tr:hover td { background:#1e2130; }
   border-radius:8px; cursor:pointer; font-size:13px; font-family:inherit;
 }
 .refresh-btn:hover { background:#2980b9; }
+.clear-btn {
+  background:#e74c3c; color:#fff; border:none; padding:8px 18px;
+  border-radius:8px; cursor:pointer; font-size:13px; font-family:inherit;
+}
+.clear-btn:hover { background:#c0392b; }
 </style>
 </head>
 <body>
 
 <header>
   <h1>🛡️ Phishing Demo — Admin Panel</h1>
-  <button class="refresh-btn" onclick="loadData()">↻ განახლება</button>
+  <div style="display:flex;gap:10px;">
+    <button class="refresh-btn" onclick="loadData()">↻ განახლება</button>
+    <button class="clear-btn" onclick="clearAll()">🗑 გასუფთავება</button>
+  </div>
 </header>
+
+<div id="confirm-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#1a1d27;border:1px solid #3a3d4a;border-radius:14px;padding:32px 36px;max-width:380px;width:90%;text-align:center;">
+    <div style="font-size:40px;margin-bottom:12px;">🗑️</div>
+    <h3 style="color:#fff;margin-bottom:8px;">დარწმუნებული ხართ?</h3>
+    <p style="color:#888;font-size:14px;margin-bottom:24px;">ყველა ჩანაწერი წაიშლება და ვერ აღდგება.</p>
+    <div style="display:flex;gap:10px;justify-content:center;">
+      <button onclick="document.getElementById('confirm-modal').style.display='none'" style="background:#2a2d3a;color:#aaa;border:1px solid #3a3d4a;padding:10px 24px;border-radius:8px;cursor:pointer;font-size:14px;">გაუქმება</button>
+      <button onclick="confirmClear()" style="background:#e74c3c;color:#fff;border:none;padding:10px 24px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;">წაშლა</button>
+    </div>
+  </div>
+</div>
 
 <div class="stats">
   <div class="stat-card cred">
@@ -156,6 +176,16 @@ async function loadData() {
   } catch(e) {
     document.getElementById('tbl-cred').innerHTML = '<tr><td colspan="4" class="empty">❌ API კავშირის შეცდომა</td></tr>';
   }
+}
+
+function clearAll() {
+  document.getElementById('confirm-modal').style.display = 'flex';
+}
+
+async function confirmClear() {
+  document.getElementById('confirm-modal').style.display = 'none';
+  await fetch(API.replace('/admin', '/admin/clear'), { method: 'DELETE' });
+  loadData();
 }
 
 loadData();
