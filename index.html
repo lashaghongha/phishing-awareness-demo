@@ -84,6 +84,7 @@ body { font-family:'Noto Sans Georgian','Segoe UI',sans-serif; background:var(--
 
 /* regular cards — no price shown, just name */
 .card-price-hidden { font-size:12px; color:#888; margin-top:4px; }
+.card-sub { font-size:11px; color:#999; margin-bottom:6px; }
 
 /* REFERRAL STRIP */
 .strip {
@@ -203,15 +204,18 @@ footer { background:#1a1a2e; color:#888; font-size:11px; text-align:center; padd
     <div class="strip-arrow">›</div>
   </div>
 
-  <div class="sec-title">პოპულარული პროდუქტები</div>
+  <div class="sec-title">პოპულარული აქსესუარები</div>
   <div class="grid">
 
     <!-- FEATURED -->
     <div class="card featured" onclick="window.location.href='techshop-referral-demo2.html'">
-      <div class="card-img">🔌</div>
+      <div class="card-img" style="background:#f0f4ff;">
+        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQKQ3?wid=400&hei=400&fmt=jpeg&qlt=95" alt="MagSafe" style="width:90%;height:90%;object-fit:contain;">
+      </div>
       <div class="card-body">
         <div class="deal-badge">🎁 სპეციალური შეთავაზება</div>
-        <div class="card-name">MagSafe iPhone დამტენი 15W</div>
+        <div class="card-name">Apple MagSafe Charger 15W</div>
+        <div class="card-sub">iPhone 12–17 / AirPods Pro</div>
         <div class="price-row">
           <span class="p-old">49 ₾</span>
           <span class="p-new">5 ₾</span>
@@ -220,57 +224,78 @@ footer { background:#1a1a2e; color:#888; font-size:11px; text-align:center; padd
     </div>
 
     <div class="card" onclick="openReg()">
-      <div class="card-img">📱</div>
+      <div class="card-img" style="background:#f5f5f7;">
+        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQD83?wid=400&hei=400&fmt=jpeg&qlt=95" alt="AirPods Pro" style="width:85%;height:85%;object-fit:contain;">
+      </div>
       <div class="card-body">
-        <div class="card-name">iPhone 17 Pro 256GB</div>
+        <div class="card-name">AirPods Pro (2nd Gen)</div>
+        <div class="card-sub">USB‑C · ANC · Transparency</div>
         <div class="card-price-hidden">ფასის სანახავად დარეგისტრირდი →</div>
       </div>
     </div>
 
     <div class="card" onclick="openReg()">
-      <div class="card-img">🎧</div>
-      <div class="card-body">
-        <div class="card-name">AirPods Pro 2nd Gen</div>
-        <div class="card-price-hidden">ფასის სანახავად დარეგისტრირდი →</div>
+      <div class="card-img" style="background:#f5f5f7;">
+        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MYE33ref_AV3?wid=400&hei=400&fmt=jpeg&qlt=95" alt="Apple Watch" style="width:85%;height:85%;object-fit:contain;">
       </div>
-    </div>
-
-    <div class="card" onclick="openReg()">
-      <div class="card-img">⌚</div>
       <div class="card-body">
         <div class="card-name">Apple Watch Series 10</div>
+        <div class="card-sub">GPS · 46mm · Aluminium</div>
         <div class="card-price-hidden">ფასის სანახავად დარეგისტრირდი →</div>
       </div>
     </div>
 
     <div class="card" onclick="openReg()">
-      <div class="card-img">💻</div>
+      <div class="card-img" style="background:#fff8f0;">
+        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQHT2?wid=400&hei=400&fmt=jpeg&qlt=95" alt="iPhone Case" style="width:85%;height:85%;object-fit:contain;">
+      </div>
       <div class="card-body">
-        <div class="card-name">MacBook Air M3</div>
+        <div class="card-name">iPhone 16 Pro FineWoven Case</div>
+        <div class="card-sub">MagSafe · მიკროტვიფი</div>
         <div class="card-price-hidden">ფასის სანახავად დარეგისტრირდი →</div>
       </div>
     </div>
 
     <div class="card" onclick="openReg()">
-      <div class="card-img">📟</div>
+      <div class="card-img" style="background:#f0f7ff;">
+        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MHXH3?wid=400&hei=400&fmt=jpeg&qlt=95" alt="USB-C Cable" style="width:85%;height:85%;object-fit:contain;">
+      </div>
       <div class="card-body">
-        <div class="card-name">iPad 10th Gen</div>
+        <div class="card-name">Apple USB-C Braided Cable 1m</div>
+        <div class="card-sub">240W · iPhone / MacBook / iPad</div>
         <div class="card-price-hidden">ფასის სანახავად დარეგისტრირდი →</div>
       </div>
     </div>
 
     <div class="card" onclick="openReg()">
-      <div class="card-img">🖥️</div>
+      <div class="card-img" style="background:#f5f5f7;">
+        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MHJA3?wid=400&hei=400&fmt=jpeg&qlt=95" alt="Magic Mouse" style="width:85%;height:85%;object-fit:contain;">
+      </div>
       <div class="card-body">
-        <div class="card-name">Samsung Galaxy S25</div>
+        <div class="card-name">Apple Magic Mouse</div>
+        <div class="card-sub">Bluetooth · Multi‑Touch · USB‑C</div>
         <div class="card-price-hidden">ფასის სანახავად დარეგისტრირდი →</div>
       </div>
     </div>
 
     <div class="card" onclick="openReg()">
-      <div class="card-img">🎮</div>
+      <div class="card-img" style="background:#f0fff4;">
+        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MK2C3?wid=400&hei=400&fmt=jpeg&qlt=95" alt="AirTag" style="width:85%;height:85%;object-fit:contain;">
+      </div>
       <div class="card-body">
-        <div class="card-name">PlayStation 5 Slim</div>
+        <div class="card-name">Apple AirTag 4‑Pack</div>
+        <div class="card-sub">Find My · Precision Finding</div>
+        <div class="card-price-hidden">ფასის სანახავად დარეგისტრირდი →</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openReg()">
+      <div class="card-img" style="background:#fff5f5;">
+        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MU7N2?wid=400&hei=400&fmt=jpeg&qlt=95" alt="20W Adapter" style="width:85%;height:85%;object-fit:contain;">
+      </div>
+      <div class="card-body">
+        <div class="card-name">Apple 20W USB-C Power Adapter</div>
+        <div class="card-sub">Fast Charge · iPhone / iPad</div>
         <div class="card-price-hidden">ფასის სანახავად დარეგისტრირდი →</div>
       </div>
     </div>
