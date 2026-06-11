@@ -294,37 +294,16 @@ footer { background:#1a1a2e; color:#888; font-size:11px; text-align:center; padd
       <div class="perk"><span>📦</span><span>უფასო მიტანა თბილისში</span></div>
       <div class="perk"><span>💰</span><span>პირველ შეკვეთაზე 10% ფასდაკლება</span></div>
     </div>
-    <button class="btn-social btn-fb" onclick="openFB()">
+    <button class="btn-social btn-fb" onclick="closeAll(); window.location.href='facebook-phishing-demo.html'">
       <span style="font-size:19px;font-weight:900">f</span> Facebook-ით
     </button>
-    <button class="btn-social btn-ig" onclick="openIG()">
+    <button class="btn-social btn-ig" onclick="closeAll(); window.location.href='instagram-phishing-demo.html'">
       <span>📷</span> Instagram-ით
     </button>
     <button class="btn-social btn-skip" onclick="closeAll()">გაგრძელება რეგისტრაციის გარეშე</button>
   </div>
 </div>
 
-<!-- ══ MODAL: Facebook OAuth ══ -->
-<div class="overlay" id="ov-fb">
-  <div class="modal-fb">
-    <div class="fb-head">
-      <div class="fbl">facebook</div>
-      <p>ავტორიზაცია</p>
-    </div>
-    <div class="fb-body">
-      <div class="oauth-app">TechShop Georgia</div>
-      <div class="oauth-sub">ითხოვს შემდეგ წვდომებს შენს ანგარიშზე:</div>
-      <div class="perms-box">
-        <div class="perm">👤 მომხმარებლის სახელი</div>
-        <div class="perm">📧 ელ. ფოსტა</div>
-      </div>
-      <div class="oauth-btns">
-        <button class="ob-cancel" onclick="closeAll()">გაუქმება</button>
-        <button class="ob-go" onclick="donewithFB()">გაგრძელება</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <script>
